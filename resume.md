@@ -1,8 +1,10 @@
-# XXX
+# 李松展
 
-**哈尔滨工业大学｜XX学院｜XX专业｜大三本科生**
-GPA：专业前 10%｜CET-6：552
-Email：xxx@xxx.com｜电话：xxx ｜ GitHub：xxx ｜ Homepage：xxx
+**哈尔滨工业大学｜未来技术学院 · 永坦班（院士特色班）｜本科三年级**
+
+从计算机视觉与深度学习出发，探索多模态学习、具身智能与世界模型。
+
+Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 
 ---
 
@@ -10,59 +12,73 @@ Email：xxx@xxx.com｜电话：xxx ｜ GitHub：xxx ｜ Homepage：xxx
 
 **Computer Vision / Multimodal Learning / Embodied AI / World Models**
 
-以计算机视觉与深度学习为基础，进一步研究**多模态学习、视觉语言模型、具身智能、世界模型与智能体**等前沿方向，并长期从事高水平人工智能研究。
+- **Current Research**：Hyperspectral Data Augmentation with Deep Learning — Research Student, Prof. Yushi Chen, HIT
+- **Long-term Goal**：Developing intelligent systems that perceive, reason about, and interact with the physical world.
+
+---
+
+## 教育背景
+
+**Harbin Institute of Technology（哈尔滨工业大学）**
+未来技术学院 · 永坦班（院士特色班）｜本科三年级（2024 – 2028）
+
+### 本科成绩
+- GPA：专业前 10%
+- CET-6：552
 
 ---
 
 ## 科研经历
 
-### 陈雨时教授课题组｜科研学生（2025–至今）
+### Hyperspectral Data Augmentation with Deep Learning
+**Research Student, Prof. Yushi Chen, Harbin Institute of Technology** · 2025 – Present
 
-**领域：高光谱数据增强 / 深度学习 / 遥感智能解译**
-
-- 参与高光谱数据增强方向科研项目，围绕深度学习方法开展**模型设计、实验验证与结果分析**。
-- 独立/主导完成论文核心实验，覆盖**数据处理、模型训练、消融实验、对比实验**及结果分析。
-- 以**第一作者**参与撰写科研论文，走通完整科研链路：问题分析 → 文献调研 → 模型实现 → 实验设计 → 论文撰写。
-- 积累 **PyTorch / 深度学习 / 计算机视觉 / 实验复现与科研代码开发**经验。
-- 希望将既有视觉与深度学习研究基础迁移至**多模态学习、具身智能及世界模型**方向。
-
----
-
-## 技术能力
-
-### 深度学习与计算机视觉
-- 熟悉 Python / PyTorch，具备模型训练与实验调试能力。
-- 掌握 CNN、Transformer、Attention 等基本深度学习方法。
-- 具备视觉数据处理、模型训练、实验对比与消融分析经验。
-- 能独立完成科研代码修改、实验复现与工程调试。
-
-### 科研能力
-- 具备独立文献检索、论文阅读、实验设计与科研写作能力。
-- 有完整科研项目经验，能持续投入长期科研任务。
-- 对前沿 AI 保持关注，逐步从 CV 延伸至 Multimodal / Embodied AI / World Model。
+- **Research Problem**：高光谱数据样本规模有限、类别分布不均，研究深度学习驱动的数据增强方法。
+- **My Contributions**：Literature review · Dataset preprocessing · Model implementation · Experimental design · Ablation studies · Result analysis · Manuscript writing
+- **Status**：**First-author manuscript in preparation.**
 
 ---
 
 ## 科研成果
 
-- **第一作者**：高光谱数据增强方向科研论文（研究工作进行中）。
-- **软件著作权：1 项**
-- 其他科研 / 竞赛 / 项目成果：XXX
+### Publications
+- **李松展** 等，高光谱数据增强方向科研论文（题目整理中）。First-author · manuscript in preparation.
+
+### Software Copyright
+- 软件著作权（第一作者 / Inventor）1 项（具体名称待补充）。
 
 ---
 
-## 荣誉与他人评价
+## 项目
 
-- 哈尔滨工业大学本科生，专业排名前 10%。
-- CET-6：552；具备较强动手能力与科研代码开发能力。
-- 期望进入高水平人工智能实验室长期科研，以在博士阶段形成高水平代表性成果为目标。
+- **Hyperspectral Data Augmentation** — PyTorch · Computer Vision · Remote Sensing · Deep Learning（陈雨时课题组科研项目）。
+- **Kamikaze — Riichi Mahjong RL System** — Python · PyTorch · Reinforcement Learning · Self-Play。独立实现的日麻 AI 系统，完整覆盖数据管线、规则环境、SL 初始化、奖励建模、PPO 自对弈、对手池与可复现评估基础设施（约 21M 参数），代码已开源可运行。
+
+---
+
+## 荣誉
+
+- 哈尔滨工业大学 未来技术学院 永坦班（院士特色班）成员
+- 本科专业排名前 10%
+- CET-6：552
+- 软件著作权 1 项
+
+---
+
+## 技术能力
+
+- **Programming**：Python · Git
+- **Deep Learning**：PyTorch，熟悉 CNN / Transformer / Attention
+- **Research**：Experiment Design · Ablation Study · Reproduction · Scientific Writing
+
+（仅列出实际科研中使用的技能。）
 
 ---
 
 ## 长期科研规划
 
-希望在本科阶段尽早进入稳定科研团队，通过持续科研训练逐步形成研究主线：
+希望在本科阶段尽早进入稳定科研团队，逐步形成研究主线：
 
 **Computer Vision → Multimodal Learning → Embodied AI / World Models → Intelligent Agents**
 
-长期目标是进入高水平博士培养体系，围绕前沿方向持续产出**高水平第一作者论文、可复现代码 / 模型及具有实际价值的科研成果**，并进入国内头部 AI 企业或研究团队从事前沿研发。
+目标是进入高水平博士培养体系，围绕前沿方向持续产出**高水平第一作者论文、可复现代码 / 模型及具有实际价值的科研成果**。

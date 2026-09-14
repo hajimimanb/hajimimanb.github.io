@@ -3,158 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="XXX · 哈尔滨工业大学本科生 · 计算机视觉 / 多模态学习 / 具身智能 / 世界模型研究方向">
-<title>XXX · Personal Page</title>
+<meta name="description" content="李松展 · 哈尔滨工业大学未来技术学院永坦班 · 计算机视觉 / 多模态学习 / 具身智能 / 世界模型方向目标">
+<title>李松展 · Researcher Homepage</title>
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- ===== 导航 ===== -->
-<nav class="topnav" id="topnav" aria-label="主导航">
-  <div class="container nav-wrap">
-    <a class="brand" href="#top">XXX</a>
-    <div class="nav-links">
-      <a href="#research">研究方向</a>
-      <a href="#experience">科研经历</a>
-      <a href="#skills">技术能力</a>
-      <a href="#publications">科研成果</a>
-      <a href="#plan">长期规划</a>
-      <a class="btn-pilled btn-dl" href="#contact">联系我</a>
+<nav class="topnav" id="topnav">
+  <div class="container nav-inner">
+    <span class="nav-name">李松展</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#honors">Honors</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
-    <button class="nav-toggle" aria-label="切换菜单" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
   </div>
 </nav>
 
 <!-- ===== Hero ===== -->
-<header class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="container hero-inner">
-    <div class="avatar" data-initial="X" role="img" aria-label="头像占位"></div>
-    <h1 class="hero-name">XXX</h1>
-    <p class="hero-sub">哈尔滨工业大学 · XX学院 · XX专业 · 大三本科生</p>
-    <ul class="hero-meta">
-      <li><span>GPA</span> 专业前 10%</li>
-      <li><span>CET-6</span> 552</li>
-    </ul>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#research">了解研究</a>
-      <a class="btn btn-ghost" href="#contact">联系方式</a>
+<header class="hero">
+  <div class="container">
+    <h1 class="hero-name">李松展</h1>
+    <p class="hero-line">哈尔滨工业大学 · 未来技术学院 · 永坦班（院士特色班）· 本科三年级</p>
+    <p class="hero-lead">从<em>计算机视觉与深度学习</em>出发，探索<em>多模态学习、具身智能与世界模型</em>。</p>
+
+    <dl class="hero-facts">
+      <div>
+        <dt>Research Interests</dt>
+        <dd>Computer Vision · Multimodal Learning · Embodied AI · World Models</dd>
+      </div>
+      <div>
+        <dt>Current Research</dt>
+        <dd>Hyperspectral Data Augmentation with Deep Learning — Research Student, Prof. Yushi Chen, HIT</dd>
+      </div>
+      <div>
+        <dt>Long-term Goal</dt>
+        <dd>Developing intelligent systems that perceive, reason about, and interact with the physical world.</dd>
+      </div>
+    </dl>
+
+    <div class="hero-links">
+      <a class="pill" href="#research">Research</a>
+      <a class="pill" href="#publications">Publications</a>
+      <a class="pill" href="https://github.com/hajimimanb" rel="noopener" target="_blank">GitHub</a>
+      <a class="pill" href="mailto:xxx@xxx.com">Email</a>
     </div>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- ===== 研究方向 ===== -->
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <h2 class="sec-title"><span class="sec-no">01</span>About · 关于我</h2>
+    <p class="sec-body">
+      哈尔滨工业大学未来技术学院永坦班本科生，目前在<strong>陈雨时教授课题组</strong>开展高光谱数据增强方向的科研工作，
+      以第一作者推进科研论文。具备从数据处理、模型实现到实验设计与论文撰写的完整科研经验，
+      关注将现有视觉与深度学习研究基础，延伸至<strong>多模态学习、具身智能与世界模型</strong>。
+    </p>
+  </section>
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="section">
+    <h2 class="sec-title"><span class="sec-no">02</span>Education · 本科成绩</h2>
+    <div class="edu-head">
+      <div>
+        <p class="edu-school">Harbin Institute of Technology（哈尔滨工业大学）</p>
+        <p class="edu-meta">未来技术学院 · 永坦班（院士特色班）｜本科三年级（2024 – 2028）</p>
+      </div>
+      <span class="edu-tag">Undergraduate</span>
+    </div>
+    <h3 class="sub-title">Academic Performance</h3>
+    <ul class="plain-list">
+      <li>GPA：专业前 <strong>10%</strong>　(综合/专业排名前 10%)</li>
+      <li>CET-6：<strong>552</strong></li>
+      <li>科研主线课程积累：深度学习 · 机器学习 · 计算机视觉 · 概率统计（科学科研能力侧重）</li>
+    </ul>
+  </section>
+
+  <!-- ===== Research ===== -->
   <section id="research" class="section">
-    <h2 class="section-title">研究方向</h2>
-    <p class="section-lead">Computer Vision / Multimodal Learning / Embodied AI / World Models</p>
-    <p class="section-body">
-      以<b>计算机视觉与深度学习</b>为基础，进一步研究<b>多模态学习、视觉语言模型、具身智能、世界模型与智能体</b>等前沿方向，并长期从事高水平人工智能研究。
-    </p>
-    <div class="chips" aria-label="关键词">
-      <span>Computer Vision</span>
-      <span>Multimodal</span>
-      <span>Vision-Language</span>
-      <span>Embodied AI</span>
-      <span>World Models</span>
-      <span>Intelligent Agents</span>
-    </div>
-  </section>
+    <h2 class="sec-title"><span class="sec-no">03</span>Research · 学术研究</h2>
 
-  <!-- ===== 科研经历 ===== -->
-  <section id="experience" class="section">
-    <h2 class="section-title">科研经历</h2>
-    <article class="card">
-      <div class="card-head">
-        <div>
-          <h3>陈雨时教授课题组 · 科研学生</h3>
-          <p class="card-tag">高光谱数据增强 / 深度学习 / 遥感智能解译</p>
-        </div>
-        <span class="card-time">2025 – 至今</span>
+    <h3 class="sub-title">Research Focus</h3>
+    <div class="focus">
+      <div class="focus-item">
+        <h4>01 · Computer Vision &amp; Deep Learning</h4>
+        <p>Hyperspectral Data Augmentation · Remote Sensing Image Understanding · Deep Learning（当前科研基础，陈雨时教授课题组）</p>
       </div>
-      <ul class="tick-list">
-        <li>参与高光谱数据增强方向科研项目，围绕深度学习方法开展<b>模型设计与实验验证</b>。</li>
-        <li>独立/主导完成论文核心实验，覆盖<b>数据处理、模型训练、消融实验、对比实验</b>与结果分析。</li>
-        <li>以<b>第一作者</b>参与撰写科研论文，走通完整的科研链路：问题分析 → 文献调研 → 模型实现 → 实验设计 → 论文撰写。</li>
-        <li>积累 <b>PyTorch / 深度学习 / 计算机视觉 / 实验复现与科研代码开发</b>能力。</li>
-      </ul>
-      <p class="card-foot">目标：将已有视觉与深度学习研究基础，进一步迁移至<b>多模态学习、具身智能及世界模型</b>方向。</p>
+      <div class="focus-item">
+        <h4>02 · Multimodal Learning</h4>
+        <p><em>Research Interest</em> — 多模态表征学习、视觉语言模型、多模态检索与多模态基础模型。</p>
+      </div>
+      <div class="focus-item">
+        <h4>03 · Embodied AI &amp; World Models</h4>
+        <p><em>Research Interest</em> — 具身智能、Vision-Language-Action 模型、世界模型与空间智能。</p>
+      </div>
+    </div>
+
+    <h3 class="sub-title">Research Experience</h3>
+    <article class="proj">
+      <div class="proj-head">
+        <h4>Hyperspectral Data Augmentation with Deep Learning</h4>
+        <span class="proj-tag">Research Student · 2025 – Present</span>
+      </div>
+      <p class="proj-adv">Advisor：Prof. Yushi Chen, Harbin Institute of Technology</p>
+      <p class="proj-gap"><span class="lbl">Research Problem</span> 高光谱数据存在样本规模有限、类别分布不均等问题，研究深度学习驱动的数据增强方法。</p>
+      <p class="proj-gap"><span class="lbl">My Contributions</span> Literature review · Dataset preprocessing · Model implementation · Experimental design · Ablation studies · Result analysis · Manuscript writing</p>
+      <p class="proj-gap"><span class="lbl">Status</span> <strong>First-author manuscript in preparation.</strong></p>
     </article>
-  </section>
 
-  <!-- ===== 技术能力 ===== -->
-  <section id="skills" class="section">
-    <h2 class="section-title">技术能力</h2>
-    <div class="grid two">
-      <div class="card">
-        <h3>深度学习与计算机视觉</h3>
-        <ul class="tick-list">
-          <li>熟悉 Python / PyTorch，具备模型训练与实验调试能力。</li>
-          <li>掌握 CNN、Transformer、Attention 等深度学习方法。</li>
-          <li>具备数据处理、模型训练、实验对比与消融分析经验。</li>
-          <li>能独立完成科研代码修改、实验复现与工程调试。</li>
-        </ul>
+    <h3 class="sub-title">Research Trajectory</h3>
+    <div class="trajectory">
+      <div class="traj-col">
+        <span class="traj-y">2025</span>
+        <p>Remote Sensing<br>→ Hyperspectral Data Augmentation<br>→ Deep Learning</p>
       </div>
-      <div class="card">
-        <h3>科研能力</h3>
-        <ul class="tick-list">
-          <li>具备独立文献检索、论文阅读、实验设计与科研写作能力。</li>
-          <li>有完整科研项目经验，能持续投入长期科研任务。</li>
-          <li>对前沿 AI 保持持续关注，逐步从 CV 向 Multimodal / Embodied AI / World Model 延伸。</li>
-        </ul>
+      <div class="traj-col">
+        <span class="traj-y">2026</span>
+        <p>Computer Vision<br>→ Multimodal Learning<br>→ Vision-Language Models</p>
+      </div>
+      <div class="traj-col">
+        <span class="traj-y">2027+</span>
+        <p>Embodied AI<br>→ World Models<br>→ Vision-Language-Action<br>→ Intelligent Agents</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== 科研成果 ===== -->
+  <!-- ===== Publications ===== -->
   <section id="publications" class="section">
-    <h2 class="section-title">科研成果</h2>
-    <ul class="pub-list">
-      <li><b>第一作者</b> · 高光谱数据增强方向科研论文（研究工作进行中）。</li>
-      <li>软件著作权 <b>1</b> 项。</li>
-      <li>其他科研 / 竞赛 / 项目成果：<span class="placeholder">待补充</span></li>
+    <h2 class="sec-title"><span class="sec-no">04</span>Publications · 科研成果</h2>
+    <h3 class="sub-title">Publications</h3>
+    <ol class="pub-list">
+      <li>
+        <strong>李松展</strong> 等，关于高光谱数据增强的深度学习科研论文（题目整理中）。
+        <span class="pub-status">First-author · manuscript in preparation</span>
+      </li>
+    </ol>
+    <h3 class="sub-title">Software Copyright</h3>
+    <ul class="plain-list">
+      <li>软件著作权（第一作者 / Inventor）· 1 项 <span class="muted">（具体名称待补充）</span></li>
     </ul>
   </section>
 
-  <!-- ===== 荣誉 ===== -->
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
+    <h2 class="sec-title"><span class="sec-no">05</span>Selected Projects</h2>
+    <article class="proj">
+      <div class="proj-head">
+        <h4>Hyperspectral Data Augmentation</h4>
+        <span class="proj-tag">Research Project</span>
+      </div>
+      <p class="proj-meta">PyTorch · Computer Vision · Remote Sensing · Deep Learning</p>
+      <p class="proj-desc">深度学习方法解决高光谱小样本与类不平衡下的数据增强问题；承担模型实现、实验设计与一作论文。入组：陈雨时教授课题组。</p>
+    </article>
+    <article class="proj">
+      <div class="proj-head">
+        <h4>Kamikaze — Riichi Mahjong RL System</h4>
+        <span class="proj-tag">Independent RL / AI Engineering</span>
+      </div>
+      <p class="proj-meta">Python · PyTorch · Reinforcement Learning · Self-Play</p>
+      <p class="proj-desc">独立实现的立直麻将 AI 系统：从真实牌谱数据管线到规则环境、监督学习初始化、奖励建模、PPO 自对弈、对手池与可复现评估基础设施的完整系统实现（约 21M 参数）。代码已开源并可运行。</p>
+    </article>
+    <!-- 占位注释：可在此扩展更多真实完成的项目，例如 Vision Transformer 复现 / 多模态探索，仅放真实可运行项目 -->
+  </section>
+
+  <!-- ===== Honors ===== -->
   <section id="honors" class="section">
-    <h2 class="section-title">荣誉与自我评价</h2>
-    <ul class="tick-list">
-      <li>哈尔滨工业大学本科生，专业排名前 10%。</li>
-      <li>CET-6：552；具备较强动手能力与科研代码开发能力。</li>
-      <li>希望进入高水平人工智能实验室长期科研，以在博士阶段形成高水平代表性成果为目标。</li>
+    <h2 class="sec-title"><span class="sec-no">06</span>Honors · 荣誉</h2>
+    <ul class="plain-list">
+      <li>哈尔滨工业大学 未来技术学院 永坦班（院士特色班）成员</li>
+      <li>本科专业排名前 10%</li>
+      <li>CET-6：552</li>
+      <li>软件著作权 1 项</li>
     </ul>
   </section>
 
-  <!-- ===== 长期规划 ===== -->
-  <section id="plan" class="section">
-    <h2 class="section-title">长期科研规划</h2>
-    <p class="section-body">在本科阶段尽早进入稳定科研团队，通过持续训练逐步形成研究主线：</p>
-    <div class="flow">
-      <span>Computer Vision</span><i>→</i>
-      <span>Multimodal</span><i>→</i>
-      <span>Embodied AI / World Models</span><i>→</i>
-      <span>Intelligent Agents</span>
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section">
+    <h2 class="sec-title"><span class="sec-no">07</span>Technical Skills · 技术能力</h2>
+    <div class="skills">
+      <div>
+        <h4>Programming</h4>
+        <p>Python · Git</p>
+      </div>
+      <div>
+        <h4>Deep Learning</h4>
+        <p>PyTorch · Familiar with CNN / Transformer / Attention</p>
+      </div>
+      <div>
+        <h4>Research</h4>
+        <p>Experiment Design · Ablation Study · Reproduction · Scientific Writing</p>
+      </div>
     </div>
-    <p class="section-body mt">
-      长期目标是进入高水平博士培养体系，围绕前沿方向持续产出<b>高水平第一作者论文、可复现代码 / 模型及具有实际价值的成果</b>，并进入国内头部 AI 企业或研究团队从事前沿研发。
-    </p>
+    <p class="muted small">仅列出已在实际科研中使用的技能，避免过度描述。</p>
   </section>
 
-  <!-- ===== 联系 ===== -->
-  <section id="contact" class="section section-contact">
-    <h2 class="section-title">联系方式</h2>
-    <div class="contact-card">
-      <p>欢迎交流科研与合作，随时联系：</p>
-      <ul class="contact-list">
-        <li>Email：<span class="placeholder">xxx@xxx.com</span></li>
-        <li>电话：<span class="placeholder">xxx</span></li>
-        <li>GitHub：<span class="placeholder">xxx</span></li>
-        <li>Homepage：<span class="placeholder">xxx</span></li>
-      </ul>
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section">
+    <h2 class="sec-title"><span class="sec-no">08</span>Contact · 联系方式</h2>
+    <div class="contact">
+      <p>Email：<a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+      <p>GitHub：<a href="https://github.com/hajimimanb" rel="noopener" target="_blank">github.com/hajimimanb</a></p>
+      <p class="muted small">欢迎交流科研与合作；如有意深入了解本项目可查看 GitHub 仓库中的可运行代码。</p>
     </div>
   </section>
 
@@ -162,7 +222,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p>© 2026 XXX · 哈尔滨工业大学 &nbsp;|&nbsp; 个人主页采用静态部署，源码见 <a href="https://github.com/hajimimanb/lsz.github.io" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© 2026 李松展 · 哈尔滨工业大学 &nbsp;·&nbsp; 源码见 <a href="https://github.com/hajimimanb" rel="noopener" target="_blank">GitHub</a></p>
   </div>
 </footer>
 
