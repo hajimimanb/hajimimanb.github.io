@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="李松展 · 学术研究">
+<title>学术研究 · Research · 李松展</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  .lang-switch { display: flex; gap: 2px; margin-left: 6px; }
+  .lang-switch button { font: 600 12.5px "Inter","Noto Sans SC",sans-serif; color: var(--muted); background: none; border: 1px solid var(--line); padding: 4px 10px; cursor: pointer; border-radius: 4px; }
+  .lang-switch button.on { color: #fff; background: var(--accent); border-color: var(--accent); }
+  .nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+  .nav-links { align-items: center; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="container nav-inner">
+    <span class="nav-name"><span class="zh">李松展</span><span class="en" hidden>Li Songzhan</span></span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html"><span class="zh">首页</span><span class="en" hidden>Home</span></a>
+      <a href="education.html"><span class="zh">本科成绩</span><span class="en" hidden>Education</span></a>
+      <a href="research.html" class="active"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
+      <a href="publications.html"><span class="zh">科研成果</span><span class="en" hidden>Publications</span></a>
+      <a href="honors.html"><span class="zh">荣誉</span><span class="en" hidden>Honors</span></a>
+      <a href="contact.html"><span class="zh">联系</span><span class="en" hidden>Contact</span></a>
+      <div class="lang-switch"><button data-lang="zh" class="on">中文</button><button data-lang="en">EN</button></div>
+    </div>
+    <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
+  </div>
+</nav>
+
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">03</span><span class="zh">学术研究</span><span class="en" hidden>Research</span></h2>
+
+    <h3 class="sub-title">Research Focus</h3>
+    <div class="focus">
+      <div class="focus-item">
+        <h4>01 · Computer Vision &amp; Deep Learning</h4>
+        <p class="zh">Hyperspectral Data Augmentation · Remote Sensing Image Understanding · Deep Learning（当前科研基础，陈雨时教授课题组）</p>
+        <p class="en" hidden>Hyperspectral Data Augmentation · Remote Sensing Image Understanding · Deep Learning（current foundation, Prof. Yushi Chen's group）</p>
+      </div>
+      <div class="focus-item">
+        <h4>02 · Multimodal Learning</h4>
+        <p class="zh"><em>研究兴趣</em> — 多模态表征学习、视觉语言模型、多模态检索与多模态基础模型。</p>
+        <p class="en" hidden><em>Research Interest</em> — Multimodal representation learning, vision-language models, multimodal retrieval &amp; foundation models.</p>
+      </div>
+      <div class="focus-item">
+        <h4>03 · Embodied AI &amp; World Models</h4>
+        <p class="zh"><em>研究兴趣</em> — 具身智能、Vision-Language-Action 模型、世界模型与空间智能。</p>
+        <p class="en" hidden><em>Research Interest</em> — Embodied intelligence, vision-language-action models, world models &amp; spatial intelligence.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-title"><span class="zh">研究经历</span><span class="en" hidden>Research Experience</span></h3>
+    <article class="proj">
+      <div class="proj-head">
+        <h4>Hyperspectral Data Augmentation with Deep Learning</h4>
+        <span class="proj-tag"><span class="zh">科研学生 · 2025 – 至今</span><span class="en" hidden>Research Student · 2025 – Present</span></span>
+      </div>
+      <p class="proj-adv">Advisor：Prof. Yushi Chen, Harbin Institute of Technology</p>
+      <p class="proj-gap"><span class="lbl">Research Problem</span><span class="zh">高光谱数据样本规模有限、类别分布不均，研究深度学习驱动的数据增强方法。</span><span class="en" hidden>Hyperspectral data suffers from limited samples and imbalanced classes; investigating deep-learning-driven data augmentation.</span></p>
+      <p class="proj-gap"><span class="lbl">My Contributions</span><span class="zh">文献调研 · 数据预处理 · 模型实现 · 实验设计 · 消融实验 · 结果分析 · 论文撰写</span><span class="en" hidden">Literature review · Preprocessing · Model implementation · Experiment design · Ablation · Result analysis · Writing</span></p>
+      <p class="proj-gap"><span class="lbl"><span class="zh">状态</span><span class="en" hidden>Status</span></span> <strong class="zh">一作论文撰写中</strong><strong class="en" hidden>First-author manuscript in preparation.</strong></p>
+    </article>
+
+    <h3 class="sub-title"><span class="zh">研究历程</span><span class="en" hidden>Research Trajectory</span></h3>
+    <div class="trajectory">
+      <div class="traj-col">
+        <span class="traj-y">2025</span>
+        <p class="zh">遥感<br>→ 高光谱数据增强<br>→ 深度学习</p>
+        <p class="en" hidden>Remote Sensing<br>→ Hyperspectral Data Aug.<br>→ Deep Learning</p>
+      </div>
+      <div class="traj-col">
+        <span class="traj-y">2026</span>
+        <p class="zh">计算机视觉<br>→ 多模态学习<br>→ 视觉语言模型</p>
+        <p class="en" hidden>Computer Vision<br>→ Multimodal Learning<br>→ Vision-Language Models</p>
+      </div>
+      <div class="traj-col">
+        <span class="traj-y">2027+</span>
+        <p class="zh">具身智能<br>→ 世界模型<br>→ Vision-Language-Action<br>→ 智能体</p>
+        <p class="en" hidden>Embodied AI<br>→ World Models<br>→ Vision-Language-Action<br>→ Intelligent Agents</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 <span class="zh">李松展</span><span class="en" hidden>Songzhan Li</span> · <span class="zh">哈尔滨工业大学</span><span class="en" hidden>HIT</span></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l) {
+    var lan = l === 'en' ? 'en' : 'zh-CN';
+    document.documentElement.lang = lan;
+    document.querySelectorAll('.zh').forEach(function (e) { e.hidden = (l !== 'zh'); });
+    document.querySelectorAll('.en').forEach(function (e) { e.hidden = (l !== 'en'); });
+    document.querySelectorAll('.lang-switch button').forEach(function (b) { b.classList.toggle('on', b.dataset.lang === l); });
+    try { localStorage.setItem('siteLang', l); } catch (e) {}
+    document.getElementById('navLinks').classList.remove('open');
+  }
+  document.querySelectorAll('.lang-switch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  var saved = 'zh'; try { saved = localStorage.getItem('siteLang') || 'zh'; } catch (e) {}
+  setLang(saved === 'en' ? 'en' : 'zh');
+</script>
+</body>
+</html>
