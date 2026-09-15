@@ -19,7 +19,7 @@
   .nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
   .nav-links { align-items: center; }
   [hidden] { display: none !important; }
-  /* 关于我对齐：与下方按钮网格同宽同列 */
+  /* 关于我对齐 */
   .sec-body { max-width: 100% !important; }
   .home-sec .sec-wrap { display: flex; flex-direction: column; align-items: stretch; }
   /* 首页入口卡（6 个） */
@@ -28,7 +28,7 @@
   .home-card h4 { margin: 0; font-size: 15.5px; font-weight: 700; }
   .home-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
   .home-card:hover { border-color: var(--accent); text-decoration: none; }
-  /* 成绩图片：纵向排列，放大展示 */
+  /* 成绩图片 */
   .score-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 18px; max-width: 780px; margin-left: auto; margin-right: auto; }
   .score-grid figure { margin: 0; border: 1px solid var(--line); background: var(--paper); padding: 12px; }
   .score-grid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
@@ -55,13 +55,13 @@
   <div class="container nav-inner">
     <span class="nav-name"><span class="zh">李松展</span><span class="en" hidden>Li Songzhan</span></span>
     <div class="nav-links" id="navLinks">
-      <a href="#/resume" data-page="resume"><span class="zh">简历</span><span class="en" hidden>Resume</span></a>
       <a href="#/" data-page="home"><span class="zh">首页</span><span class="en" hidden>Home</span></a>
       <a href="#/education" data-page="education"><span class="zh">本科成绩</span><span class="en" hidden>Education</span></a>
       <a href="#/research" data-page="research"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
       <a href="#/honors" data-page="honors"><span class="zh">荣誉</span><span class="en" hidden>Honors</span></a>
       <a href="#/misc" data-page="misc"><span class="zh">其他</span><span class="en" hidden>More</span></a>
       <a href="#/contact" data-page="contact"><span class="zh">联系</span><span class="en" hidden>Contact</span></a>
+      <a href="#/resume" data-page="resume"><span class="zh">简历</span><span class="en" hidden>Resume</span></a>
       <div class="lang-switch"><button data-lang="zh" class="on">中文</button><button data-lang="en">EN</button></div>
     </div>
     <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
@@ -75,8 +75,8 @@
     <h2 class="sec-title"><span class="zh">简历 PDF</span><span class="en" hidden>Resume / CV</span></h2>
     <div class="resume-box">
       <div class="resume-toolbar">
-        <a class="btn" href="resume.pdf" download target="_blank"><span class="zh">⬇ 下载 PDF</span><span class="en" hidden">⬇ Download PDF</span></a>
-        <a class="btn ghost" href="resume.pdf" target="_blank"><span class="zh">新窗口打开</span><span class="en" hidden">Open in new tab</span></a>
+        <a class="btn" href="resume.pdf" download target="_blank"><span class="zh">⬇ 下载 PDF</span><span class="en" hidden>⬇ Download PDF</span></a>
+        <a class="btn ghost" href="resume.pdf" target="_blank"><span class="zh">新窗口打开</span><span class="en" hidden>Open in new tab</span></a>
       </div>
       <iframe class="pdf-iframe" src="resume.pdf" title="简历"></iframe>
     </div>
@@ -134,7 +134,7 @@
         </div>
         <div class="home-card" onclick="go('#/resume')">
           <h4><span class="zh">简历 PDF</span><span class="en" hidden>Resume PDF</span></h4>
-          <p class="zh">查看 / 下载</p><p class="en" hidden">View / Download</p>
+          <p class="zh">查看 / 下载</p><p class="en" hidden>View / Download</p>
         </div>
       </div>
     </div>
@@ -156,7 +156,7 @@
     </div>
     <h3 class="sub-title"><span class="zh">成绩与资质</span><span class="en" hidden>Performance</span></h3>
     <ul class="plain-list">
-      <li class="zh">学分绩：<strong>22 / 192</strong>（专业前 10%）</li>
+      <li class="zh">学分绩：<strong>22 / 192</strong>（10%）</li>
       <li class="en" hidden>GPA：<strong>22 / 192</strong>（Top 10% in major）</li>
       <li class="zh">CET-6：<strong>552</strong></li>
       <li class="en" hidden>CET-6：<strong>552</strong></li>
@@ -323,7 +323,7 @@
   setLang(saved === 'en' ? 'en' : 'zh');
 
   /* 单文件多页路由 */
-  var PAGES = ['resume', 'home', 'education', 'research', 'honors', 'misc', 'contact'];
+  var PAGES = ['home', 'education', 'research', 'honors', 'misc', 'contact', 'resume'];
   function showPage(name) {
     if (PAGES.indexOf(name) === -1) name = 'home';
     document.querySelectorAll('.view').forEach(function (v) { v.classList.toggle('active', v.id === 'view-' + name); });
