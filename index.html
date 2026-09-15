@@ -38,14 +38,20 @@
   .focus-item { border: 1px solid var(--line); background: var(--paper); padding: 16px 18px; }
   .focus-item h4 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
   .focus-item p { margin: 0; color: var(--muted); font-size: 14px; }
-  /* 简历 PDF 查看界面 */
+  /* 荣誉分组 */
+  .honor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 6px; }
+  .honor-grid h3 { font-size: 15px; font-weight: 700; margin: 0 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .honor-grid ul { list-style: none; margin: 0; padding: 0; }
+  .honor-grid li { position: relative; padding: 4px 0 4px 18px; color: var(--ink); font-size: 14.5px; }
+  .honor-grid li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
+  /* 简历 PDF 界面 */
   .resume-box { border: 1px solid var(--line); background: var(--paper); padding: 18px; margin-top: 16px; }
   .resume-toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
   .btn { display: inline-block; font: 600 14px "Inter","Noto Sans SC",sans-serif; color: #fff; background: var(--accent); border: none; padding: 9px 18px; border-radius: 6px; cursor: pointer; text-decoration: none; }
   .btn:hover { text-decoration: none; opacity: .92; }
   .btn.ghost { color: var(--ink); background: transparent; border: 1px solid var(--line); }
   .pdf-iframe { width: 100%; height: 80vh; min-height: 600px; border: 1px solid var(--line); background: #fff; }
-  @media (max-width: 680px) { .home-cards, .focus2 { grid-template-columns: 1fr; } }
+  @media (max-width: 680px) { .home-cards, .focus2, .honor-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -232,32 +238,38 @@
 <main class="container">
   <section class="section">
     <h2 class="sec-title"><span class="sec-no">03</span><span class="zh">荣誉</span><span class="en" hidden>Honors</span></h2>
-    <h3 class="sub-title"><span class="zh">大学</span><span class="en" hidden>University</span></h3>
-    <ul class="plain-list">
-      <li class="zh">软件著作权 × 1</li>
-      <li class="en" hidden>Software copyright × 1</li>
-      <li class="zh">学科奖学金 × 1</li>
-      <li class="en" hidden>Discipline Scholarship × 1</li>
-      <li class="zh">国家级大学生创新创业训练计划（大创）奖项 × 1</li>
-      <li class="en" hidden>National College Student Innovation &amp; Entrepreneurship Program (DaChuang) award × 1</li>
-      <li class="zh">省级大一年度项目 × 1</li>
-      <li class="en" hidden>Provincial freshman-year project × 1</li>
-      <li class="zh">全国大学生数学竞赛 省级一等奖 × 2</li>
-      <li class="en" hidden>National College Mathematics Competition, Provincial First Prize × 2</li>
-    </ul>
-    <h3 class="sub-title"><span class="zh">高中（学科竞赛）</span><span class="en" hidden>High School</span></h3>
-    <ul class="plain-list">
-      <li class="zh">计算机：省一等奖 × 1、省二等奖 × 1</li>
-      <li class="en" hidden>Informatics：provincial 1st × 1, provincial 2nd × 1</li>
-      <li class="zh">数学：省二等奖 × 2</li>
-      <li class="en" hidden>Mathematics：provincial 2nd × 2</li>
-      <li class="zh">物理：省一等奖 × 1</li>
-      <li class="en" hidden>Physics：provincial 1st × 1</li>
-      <li class="zh">生物：省二等奖 × 1</li>
-      <li class="en" hidden>Biology：provincial 2nd × 1</li>
-      <li class="zh">化学：省三等奖 × 1</li>
-      <li class="en" hidden>Chemistry：provincial 3rd × 1</li>
-    </ul>
+    <div class="honor-grid">
+      <div>
+        <h3><span class="zh">大学</span><span class="en" hidden>University</span></h3>
+        <ul>
+          <li class="zh">软件著作权 × 1</li>
+          <li class="en" hidden>Software copyright × 1</li>
+          <li class="zh">学科奖学金 × 1</li>
+          <li class="en" hidden>Discipline Scholarship × 1</li>
+          <li class="zh">国家级大学生创新创业训练计划（大创）奖项 × 1</li>
+          <li class="en" hidden>National College Student Innovation &amp; Entrepreneurship Program (DaChuang) award × 1</li>
+          <li class="zh">省级大一年度项目 × 1</li>
+          <li class="en" hidden>Provincial freshman-year project × 1</li>
+          <li class="zh">全国大学生数学竞赛：省级一等奖 × 2</li>
+          <li class="en" hidden>National College Mathematics Competition, Provincial First Prize × 2</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="zh">高中（学科竞赛）</span><span class="en" hidden>High School</span></h3>
+        <ul>
+          <li class="zh">计算机：省级一等奖 × 1、省级二等奖 × 1</li>
+          <li class="en" hidden>Informatics：provincial 1st × 1, provincial 2nd × 1</li>
+          <li class="zh">数学：省级二等奖 × 2</li>
+          <li class="en" hidden>Mathematics：provincial 2nd × 2</li>
+          <li class="zh">物理：省级一等奖 × 1</li>
+          <li class="en" hidden>Physics：provincial 1st × 1</li>
+          <li class="zh">生物：省级二等奖 × 1</li>
+          <li class="en" hidden>Biology：provincial 2nd × 1</li>
+          <li class="zh">化学：省级三等奖 × 1</li>
+          <li class="en" hidden>Chemistry：provincial 3rd × 1</li>
+        </ul>
+      </div>
+    </div>
   </section>
 </main>
 </div>
