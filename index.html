@@ -9,14 +9,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* 多页视图：单文件内的页面切换 */
+  .view { display: none; }
+  .view.active { display: block; }
+  /* 语言切换按钮 */
   .lang-switch { display: flex; gap: 2px; margin-left: 6px; }
   .lang-switch button { font: 600 12.5px "Inter","Noto Sans SC",sans-serif; color: var(--muted); background: none; border: 1px solid var(--line); padding: 4px 10px; cursor: pointer; border-radius: 4px; }
   .lang-switch button.on { color: #fff; background: var(--accent); border-color: var(--accent); }
   .nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
   .nav-links { align-items: center; }
   [hidden] { display: none !important; }
+  /* 首页入口卡 */
   .home-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
-  .home-card { border: 1px solid var(--line); background: var(--paper); padding: 20px 22px; display: block; }
+  .home-card { border: 1px solid var(--line); background: var(--paper); padding: 20px 22px; display: block; cursor: pointer; }
   .home-card h4 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
   .home-card p { margin: 0; color: var(--muted); font-size: 14.5px; }
   .home-card:hover { border-color: var(--accent); text-decoration: none; }
@@ -25,22 +30,25 @@
 </head>
 <body>
 
+<!-- ===== 导航（所有“页面”共享） ===== -->
 <nav class="topnav">
   <div class="container nav-inner">
     <span class="nav-name"><span class="zh">李松展</span><span class="en" hidden>Li Songzhan</span></span>
     <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active"><span class="zh">首页</span><span class="en" hidden>Home</span></a>
-      <a href="education.html"><span class="zh">本科成绩</span><span class="en" hidden>Education</span></a>
-      <a href="research.html"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
-      <a href="publications.html"><span class="zh">科研成果</span><span class="en" hidden>Publications</span></a>
-      <a href="honors.html"><span class="zh">荣誉</span><span class="en" hidden>Honors</span></a>
-      <a href="contact.html"><span class="zh">联系</span><span class="en" hidden>Contact</span></a>
+      <a href="#/" data-page="home"><span class="zh">首页</span><span class="en" hidden>Home</span></a>
+      <a href="#/education" data-page="education"><span class="zh">本科成绩</span><span class="en" hidden>Education</span></a>
+      <a href="#/research" data-page="research"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
+      <a href="#/publications" data-page="publications"><span class="zh">科研成果</span><span class="en" hidden>Publications</span></a>
+      <a href="#/honors" data-page="honors"><span class="zh">荣誉</span><span class="en" hidden>Honors</span></a>
+      <a href="#/contact" data-page="contact"><span class="zh">联系</span><span class="en" hidden>Contact</span></a>
       <div class="lang-switch"><button data-lang="zh" class="on">中文</button><button data-lang="en">EN</button></div>
     </div>
     <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">≡</button>
   </div>
 </nav>
 
+<!-- ========== 视图：首页 ========== -->
+<div class="view active" id="view-home">
 <header class="hero">
   <div class="container">
     <h1 class="hero-name"><span class="zh">李松展</span><span class="en" hidden>Songzhan Li</span></h1>
@@ -58,37 +66,165 @@
       </div>
     </dl>
     <div class="hero-links">
-      <a class="pill" href="research.html"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
-      <a class="pill" href="publications.html"><span class="zh">科研成果</span><span class="en" hidden>Publications</span></a>
-      <a class="pill" href="contact.html"><span class="zh">联系方式</span><span class="en" hidden>Contact</span></a>
+      <a class="pill" href="#/research"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
+      <a class="pill" href="#/publications"><span class="zh">科研成果</span><span class="en" hidden>Publications</span></a>
+      <a class="pill" href="#/contact"><span class="zh">联系方式</span><span class="en" hidden>Contact</span></a>
     </div>
   </div>
 </header>
-
 <main class="container">
   <section class="section">
     <h2 class="sec-title"><span class="sec-no">About</span><span class="zh">关于我</span><span class="en" hidden>About Me</span></h2>
-    <p class="sec-body"><span class="zh">哈尔滨工业大学未来技术学院永坦班本科生，目前在<strong>陈雨时教授课题组</strong>开展高光谱数据增强方向科研，以第一作者推进论文。具备从数据处理、模型实现到实验设计与论文撰写的完整科研链路，关注将视觉与深度学习基础延伸至<strong>多模态学习、具身智能与世界模型</strong>。</span><span class="en" hidden>Undergraduate at the Yongtan Honors Class, School of Future Technology, HIT. Currently conducting research on <strong>hyperspectral data augmentation</strong> in <strong>Prof. Yushi Chen's group</strong>, pursuing a first-author paper. I bring a complete research pipeline and aim to extend my CV/DL foundation toward <strong>multimodal learning, embodied AI, and world models</strong>.</span></p>
-
+    <p class="sec-body"><span class="zh">哈尔滨工业大学未来技术学院永坦班本科生，目前在<strong>陈雨时教授课题组</strong>开展高光谱数据增强方向科研，以第一作者推进论文。具备从数据处理、模型实现到实验设计与论文撰写的完整科研链路，关注将视觉与深度学习基础延伸至<strong>多模态学习、具身智能与世界模型</strong>。</span><span class="en" hidden>Undergraduate at the Yongtan Honors Class, School of Future Technology, HIT. Currently researching <strong>hyperspectral data augmentation</strong> in <strong>Prof. Yushi Chen's group</strong>, pursuing a first-author paper. I bring a complete research pipeline and aim to extend my CV/DL foundation toward <strong>multimodal learning, embodied AI, and world models</strong>.</span></p>
     <div class="home-cards">
-      <a class="home-card" href="education.html">
+      <div class="home-card" onclick="go('#/education')">
         <h4><span class="zh">本科成绩</span><span class="en" hidden>Education</span></h4>
         <p class="zh">GPA 专业前 10% · CET-6 552 · 研向课程积累</p>
         <p class="en" hidden>Top 10% GPA · CET-6 552 · research-oriented courses</p>
-      </a>
-      <a class="home-card" href="research.html">
+      </div>
+      <div class="home-card" onclick="go('#/research')">
         <h4><span class="zh">学术研究</span><span class="en" hidden>Research</span></h4>
         <p class="zh">Focus · Experience · Research Trajectory</p>
         <p class="en" hidden>Focus · Experience · Research Trajectory</p>
-      </a>
-      <a class="home-card" href="publications.html">
+      </div>
+      <div class="home-card" onclick="go('#/publications')">
         <h4><span class="zh">科研成果</span><span class="en" hidden>Publications</span></h4>
         <p class="zh">一作论文（撰写中） · 软著 1 项</p>
         <p class="en" hidden>First-author paper (in prep.) · Software copyright</p>
-      </a>
+      </div>
     </div>
   </section>
 </main>
+</div>
+
+<!-- ========== 视图：本科成绩 ========== -->
+<div class="view" id="view-education">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">02</span><span class="zh">本科成绩</span><span class="en" hidden>Education</span></h2>
+    <div class="edu-head">
+      <div>
+        <p class="edu-school">Harbin Institute of Technology（哈尔滨工业大学）</p>
+        <p class="edu-meta"><span class="zh">未来技术学院 · 永坦班（院士特色班）｜本科三年级（2024 – 2028）</span><span class="en" hidden>School of Future Technology · Yongtan Honors Class | Undergraduate, 3rd year (2024 – 2028)</span></p>
+      </div>
+      <span class="edu-tag">Undergraduate</span>
+    </div>
+    <h3 class="sub-title"><span class="zh">学业表现</span><span class="en" hidden>Academic Performance</span></h3>
+    <ul class="plain-list">
+      <li class="zh">GPA：专业前 <strong>10%</strong></li>
+      <li class="en" hidden>GPA：<strong>Top 10%</strong> in major</li>
+      <li class="zh">CET-6：<strong>552</strong></li>
+      <li class="en" hidden>CET-6：<strong>552</strong></li>
+      <li class="zh">科研主线：深度学习 · 机器学习 · 计算机视觉 · 概率统计（以科研应用为导向的课程与实践积累）</li>
+      <li class="en" hidden>Research-oriented coursework &amp; practice in Deep Learning · Machine Learning · Computer Vision · Probability &amp; Statistics</li>
+    </ul>
+  </section>
+</main>
+</div>
+
+<!-- ========== 视图：学术研究 ========== -->
+<div class="view" id="view-research">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">03</span><span class="zh">学术研究</span><span class="en" hidden>Research</span></h2>
+    <h3 class="sub-title">Research Focus</h3>
+    <div class="focus">
+      <div class="focus-item">
+        <h4>01 · Computer Vision &amp; Deep Learning</h4>
+        <p class="zh">Hyperspectral Data Augmentation · Remote Sensing Image Understanding · Deep Learning（当前科研基础，陈雨时教授课题组）</p>
+        <p class="en" hidden>Hyperspectral Data Augmentation · Remote Sensing Image Understanding · Deep Learning（current foundation, Prof. Yushi Chen's group）</p>
+      </div>
+      <div class="focus-item">
+        <h4>02 · Multimodal Learning</h4>
+        <p class="zh"><em>研究兴趣</em> — 多模态表征学习、视觉语言模型、多模态检索与多模态基础模型。</p>
+        <p class="en" hidden><em>Research Interest</em> — Multimodal representation learning, vision-language models, multimodal retrieval &amp; foundation models.</p>
+      </div>
+      <div class="focus-item">
+        <h4>03 · Embodied AI &amp; World Models</h4>
+        <p class="zh"><em>研究兴趣</em> — 具身智能、Vision-Language-Action 模型、世界模型与空间智能。</p>
+        <p class="en" hidden><em>Research Interest</em> — Embodied intelligence, vision-language-action models, world models &amp; spatial intelligence.</p>
+      </div>
+    </div>
+    <h3 class="sub-title"><span class="zh">研究经历</span><span class="en" hidden>Research Experience</span></h3>
+    <article class="proj">
+      <div class="proj-head">
+        <h4>Hyperspectral Data Augmentation with Deep Learning</h4>
+        <span class="proj-tag"><span class="zh">科研学生 · 2025 – 至今</span><span class="en" hidden>Research Student · 2025 – Present</span></span>
+      </div>
+      <p class="proj-adv">Advisor：Prof. Yushi Chen, Harbin Institute of Technology</p>
+      <p class="proj-gap"><span class="lbl">Research Problem</span><span class="zh">高光谱数据样本规模有限、类别分布不均，研究深度学习驱动的数据增强方法。</span><span class="en" hidden>Hyperspectral data suffers from limited samples and imbalanced classes; investigating deep-learning-driven data augmentation.</span></p>
+      <p class="proj-gap"><span class="lbl">My Contributions</span><span class="zh">文献调研 · 数据预处理 · 模型实现 · 实验设计 · 消融实验 · 结果分析 · 论文撰写</span><span class="en" hidden">Literature review · Preprocessing · Model implementation · Experiment design · Ablation · Result analysis · Writing</span></p>
+      <p class="proj-gap"><span class="lbl"><span class="zh">状态</span><span class="en" hidden>Status</span></span> <strong class="zh">一作论文撰写中</strong><strong class="en" hidden>First-author manuscript in preparation.</strong></p>
+    </article>
+    <h3 class="sub-title"><span class="zh">研究历程</span><span class="en" hidden>Research Trajectory</span></h3>
+    <div class="trajectory">
+      <div class="traj-col"><span class="traj-y">2025</span>
+        <p class="zh">遥感<br>→ 高光谱数据增强<br>→ 深度学习</p>
+        <p class="en" hidden>Remote Sensing<br>→ Hyperspectral Data Aug.<br>→ Deep Learning</p></div>
+      <div class="traj-col"><span class="traj-y">2026</span>
+        <p class="zh">计算机视觉<br>→ 多模态学习<br>→ 视觉语言模型</p>
+        <p class="en" hidden>Computer Vision<br>→ Multimodal Learning<br>→ Vision-Language Models</p></div>
+      <div class="traj-col"><span class="traj-y">2027+</span>
+        <p class="zh">具身智能<br>→ 世界模型<br>→ Vision-Language-Action<br>→ 智能体</p>
+        <p class="en" hidden>Embodied AI<br>→ World Models<br>→ Vision-Language-Action<br>→ Intelligent Agents</p></div>
+    </div>
+  </section>
+</main>
+</div>
+
+<!-- ========== 视图：科研成果 ========== -->
+<div class="view" id="view-publications">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">04</span><span class="zh">科研成果</span><span class="en" hidden>Publications</span></h2>
+    <h3 class="sub-title">Publications</h3>
+    <ol class="pub-list">
+      <li>
+        <strong class="zh">李松展</strong><strong class="en" hidden>Songzhan Li</strong> <span class="zh">等，关于高光谱数据增强的深度学习科研论文（题目整理中）。</span><span class="en" hidden>&amp; co-authors, deep learning for hyperspectral data augmentation (title in preparation).</span>
+        <span class="pub-status"><span class="zh">一作 · 撰写中</span><span class="en" hidden>First-author · in preparation</span></span>
+      </li>
+    </ol>
+    <h3 class="sub-title">Software Copyright</h3>
+    <ul class="plain-list">
+      <li class="zh">软件著作权（第一作者 / Inventor）· 1 项<span class="muted">（具体名称待补充）</span></li>
+      <li class="en" hidden>Software copyright（First author / Inventor）· 1 item<span class="muted">（title TBD）</span></li>
+    </ul>
+  </section>
+</main>
+</div>
+
+<!-- ========== 视图：荣誉 ========== -->
+<div class="view" id="view-honors">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">05</span><span class="zh">荣誉</span><span class="en" hidden>Honors</span></h2>
+    <ul class="plain-list">
+      <li class="zh">哈尔滨工业大学 未来技术学院 永坦班（院士特色班）成员</li>
+      <li class="en" hidden>Member of the Yongtan Honors Class, School of Future Technology, HIT</li>
+      <li class="zh">本科专业排名前 10%</li>
+      <li class="en" hidden>Top 10% in major</li>
+      <li class="zh">CET-6：552</li>
+      <li class="en" hidden>CET-6：552</li>
+      <li class="zh">软件著作权 1 项</li>
+      <li class="en" hidden>Software copyright（1）</li>
+    </ul>
+  </section>
+</main>
+</div>
+
+<!-- ========== 视图：联系 ========== -->
+<div class="view" id="view-contact">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="sec-no">06</span><span class="zh">联系方式</span><span class="en" hidden>Contact</span></h2>
+    <div class="contact">
+      <p>Email：<a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+      <p>GitHub：<a href="https://github.com/hajimimanb" rel="noopener" target="_blank">github.com/hajimimanb</a></p>
+      <p class="muted small"><span class="zh">欢迎交流科研与合作；有意深入了解项目可查看 GitHub 上的可运行代码。</span><span class="en" hidden>Open to research collaboration; runnable code is available on my GitHub.</span></p>
+    </div>
+  </section>
+</main>
+</div>
 
 <footer class="footer">
   <div class="container">
@@ -97,6 +233,7 @@
 </footer>
 
 <script>
+  /* ---------- 语言切换 ---------- */
   function setLang(l) {
     var lan = l === 'en' ? 'en' : 'zh-CN';
     document.documentElement.lang = lan;
@@ -109,6 +246,25 @@
   document.querySelectorAll('.lang-switch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'zh'; try { saved = localStorage.getItem('siteLang') || 'zh'; } catch (e) {}
   setLang(saved === 'en' ? 'en' : 'zh');
+
+  /* ---------- 单文件多页路由（hash） ---------- */
+  var PAGES = ['home', 'education', 'research', 'publications', 'honors', 'contact'];
+  function showPage(name) {
+    if (PAGES.indexOf(name) === -1) name = 'home';
+    document.querySelectorAll('.view').forEach(function (v) { v.classList.toggle('active', v.id === 'view-' + name); });
+    document.querySelectorAll('.nav-links a[data-page]').forEach(function (a) {
+      a.classList.toggle('active', a.dataset.page === name);
+    });
+    document.getElementById('navLinks').classList.remove('open');
+    window.scrollTo(0, 0);
+  }
+  function route() {
+    var h = location.hash.replace(/^#\/?/, '') || 'home';
+    showPage(h.split('/')[0] || 'home');
+  }
+  function go(href) { location.hash = href; return false; }
+  window.addEventListener('hashchange', route);
+  route();
   addEventListener('scroll', function () { document.querySelector('.topnav').classList.toggle('scrolled', scrollY > 8); }, { passive: true });
 </script>
 </body>
