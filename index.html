@@ -19,6 +19,9 @@
   .nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
   .nav-links { align-items: center; }
   [hidden] { display: none !important; }
+  /* 关于我对齐：与下方按钮网格同宽同列 */
+  .sec-body { max-width: 100% !important; }
+  .home-sec .sec-wrap { display: flex; flex-direction: column; align-items: stretch; }
   /* 首页入口卡（6 个） */
   .home-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
   .home-card { border: 1px solid var(--line); background: var(--paper); padding: 18px 20px; display: block; cursor: pointer; text-align: center; }
@@ -35,6 +38,13 @@
   .focus-item { border: 1px solid var(--line); background: var(--paper); padding: 16px 18px; }
   .focus-item h4 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
   .focus-item p { margin: 0; color: var(--muted); font-size: 14px; }
+  /* 简历 PDF 查看界面 */
+  .resume-box { border: 1px solid var(--line); background: var(--paper); padding: 18px; margin-top: 16px; }
+  .resume-toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .btn { display: inline-block; font: 600 14px "Inter","Noto Sans SC",sans-serif; color: #fff; background: var(--accent); border: none; padding: 9px 18px; border-radius: 6px; cursor: pointer; text-decoration: none; }
+  .btn:hover { text-decoration: none; opacity: .92; }
+  .btn.ghost { color: var(--ink); background: transparent; border: 1px solid var(--line); }
+  .pdf-iframe { width: 100%; height: 80vh; min-height: 600px; border: 1px solid var(--line); background: #fff; }
   @media (max-width: 680px) { .home-cards, .focus2 { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -45,6 +55,7 @@
   <div class="container nav-inner">
     <span class="nav-name"><span class="zh">李松展</span><span class="en" hidden>Li Songzhan</span></span>
     <div class="nav-links" id="navLinks">
+      <a href="#/resume" data-page="resume"><span class="zh">简历</span><span class="en" hidden>Resume</span></a>
       <a href="#/" data-page="home"><span class="zh">首页</span><span class="en" hidden>Home</span></a>
       <a href="#/education" data-page="education"><span class="zh">本科成绩</span><span class="en" hidden>Education</span></a>
       <a href="#/research" data-page="research"><span class="zh">学术研究</span><span class="en" hidden>Research</span></a>
@@ -57,8 +68,24 @@
   </div>
 </nav>
 
+<!-- ========== 简历 PDF ========== -->
+<div class="view" id="view-resume">
+<main class="container">
+  <section class="section">
+    <h2 class="sec-title"><span class="zh">简历 PDF</span><span class="en" hidden>Resume / CV</span></h2>
+    <div class="resume-box">
+      <div class="resume-toolbar">
+        <a class="btn" href="resume.pdf" download target="_blank"><span class="zh">⬇ 下载 PDF</span><span class="en" hidden">⬇ Download PDF</span></a>
+        <a class="btn ghost" href="resume.pdf" target="_blank"><span class="zh">新窗口打开</span><span class="en" hidden">Open in new tab</span></a>
+      </div>
+      <iframe class="pdf-iframe" src="resume.pdf" title="简历"></iframe>
+    </div>
+  </section>
+</main>
+</div>
+
 <!-- ========== 首页 ========== -->
-<div class="view active" id="view-home">
+<div class="view" id="view-home">
 <header class="hero">
   <div class="container">
     <h1 class="hero-name"><span class="zh">李松展</span><span class="en" hidden>Songzhan Li</span></h1>
@@ -79,35 +106,37 @@
   </div>
 </header>
 <main class="container">
-  <section class="section">
-    <h2 class="sec-title"><span class="zh">关于我</span><span class="en" hidden>About Me</span></h2>
-    <p class="sec-body"><span class="zh">哈尔滨工业大学（本部）未来技术学院永坦班本科生，现于<strong>陈雨时教授课题组</strong>进行高光谱数据增强方向科研，以第一作者推进论文；正<strong>准备进入左旺孟老师课题组</strong>实习，规划直博科研。关注将视觉与深度学习基础延伸至<strong>多模态学习、具身智能与世界模型</strong>。</span><span class="en" hidden>Undergraduate at the Yongtan Honors Class, School of Future Technology, HIT (Main Campus). Currently researching <strong>hyperspectral data augmentation</strong> in <strong>Prof. Yushi Chen's group</strong>, pursuing a first-author paper, and preparing for an internship in <strong>Prof. Wangmeng Zuo's group</strong> with a PhD track in mind. Aiming to extend my CV/DL foundation toward <strong>multimodal learning, embodied AI, and world models</strong>.</span></p>
+  <section class="section home-sec">
+    <div class="sec-wrap">
+      <h2 class="sec-title"><span class="zh">关于我</span><span class="en" hidden>About Me</span></h2>
+      <p class="sec-body"><span class="zh">哈尔滨工业大学（本部）未来技术学院永坦班本科生，现于<strong>陈雨时教授课题组</strong>进行高光谱数据增强方向科研，以第一作者推进论文；正<strong>准备进入左旺孟老师课题组</strong>实习，规划直博科研。关注将视觉与深度学习基础延伸至<strong>多模态学习、具身智能与世界模型</strong>。</span><span class="en" hidden>Undergraduate at the Yongtan Honors Class, School of Future Technology, HIT (Main Campus). Currently researching <strong>hyperspectral data augmentation</strong> in <strong>Prof. Yushi Chen's group</strong>, pursuing a first-author paper, and preparing for an internship in <strong>Prof. Wangmeng Zuo's group</strong> with a PhD track in mind. Aiming to extend my CV/DL foundation toward <strong>multimodal learning, embodied AI, and world models</strong>.</span></p>
 
-    <div class="home-cards">
-      <div class="home-card" onclick="go('#/education')">
-        <h4><span class="zh">本科成绩</span><span class="en" hidden>Education</span></h4>
-        <p class="zh">学分绩 · 资质</p><p class="en" hidden>GPA · Qualifications</p>
+      <div class="home-cards">
+        <div class="home-card" onclick="go('#/education')">
+          <h4><span class="zh">本科成绩</span><span class="en" hidden>Education</span></h4>
+          <p class="zh">学分绩 · 资质</p><p class="en" hidden>GPA · Qualifications</p>
+        </div>
+        <div class="home-card" onclick="go('#/research')">
+          <h4><span class="zh">学术研究</span><span class="en" hidden>Research</span></h4>
+          <p class="zh">当前研究 · 研究兴趣 · 规划</p><p class="en" hidden>Research · Interests · Plans</p>
+        </div>
+        <div class="home-card" onclick="go('#/honors')">
+          <h4><span class="zh">荣誉</span><span class="en" hidden>Honors</span></h4>
+          <p class="zh">大学 · 高中</p><p class="en" hidden>University · High School</p>
+        </div>
+        <div class="home-card" onclick="go('#/misc')">
+          <h4><span class="zh">其他</span><span class="en" hidden>More</span></h4>
+          <p class="zh">GitHub 项目</p><p class="en" hidden>GitHub Projects</p>
+        </div>
+        <div class="home-card" onclick="go('#/contact')">
+          <h4><span class="zh">联系</span><span class="en" hidden>Contact</span></h4>
+          <p class="zh">手机 · 邮箱 · 微信</p><p class="en" hidden>Phone · Email · WeChat</p>
+        </div>
+        <div class="home-card" onclick="go('#/resume')">
+          <h4><span class="zh">简历 PDF</span><span class="en" hidden>Resume PDF</span></h4>
+          <p class="zh">查看 / 下载</p><p class="en" hidden">View / Download</p>
+        </div>
       </div>
-      <div class="home-card" onclick="go('#/research')">
-        <h4><span class="zh">学术研究</span><span class="en" hidden>Research</span></h4>
-        <p class="zh">当前研究 · 研究兴趣 · 规划</p><p class="en" hidden>Research · Interests · Plans</p>
-      </div>
-      <div class="home-card" onclick="go('#/honors')">
-        <h4><span class="zh">荣誉</span><span class="en" hidden>Honors</span></h4>
-        <p class="zh">大学 · 高中</p><p class="en" hidden>University · High School</p>
-      </div>
-      <div class="home-card" onclick="go('#/misc')">
-        <h4><span class="zh">其他</span><span class="en" hidden>More</span></h4>
-        <p class="zh">GitHub 项目</p><p class="en" hidden>GitHub Projects</p>
-      </div>
-      <div class="home-card" onclick="go('#/contact')">
-        <h4><span class="zh">联系</span><span class="en" hidden>Contact</span></h4>
-        <p class="zh">手机 · 邮箱 · 微信</p><p class="en" hidden>Phone · Email · WeChat</p>
-      </div>
-      <a class="home-card" href="resume.pdf" target="_blank">
-        <h4><span class="zh">简历 PDF</span><span class="en" hidden>Resume PDF</span></h4>
-        <p class="zh">下载简历</p><p class="en" hidden>Download CV</p>
-      </a>
     </div>
   </section>
 </main>
@@ -294,7 +323,7 @@
   setLang(saved === 'en' ? 'en' : 'zh');
 
   /* 单文件多页路由 */
-  var PAGES = ['home', 'education', 'research', 'honors', 'misc', 'contact'];
+  var PAGES = ['resume', 'home', 'education', 'research', 'honors', 'misc', 'contact'];
   function showPage(name) {
     if (PAGES.indexOf(name) === -1) name = 'home';
     document.querySelectorAll('.view').forEach(function (v) { v.classList.toggle('active', v.id === 'view-' + name); });
