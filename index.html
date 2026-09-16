@@ -81,10 +81,10 @@
     <h2 class="sec-title"><span class="zh">简历 PDF</span><span class="en" hidden>Resume / CV</span></h2>
     <div class="resume-box">
       <div class="resume-toolbar">
-        <a class="btn" href="resume.pdf" download target="_blank"><span class="zh">⬇ 下载 PDF</span><span class="en" hidden>⬇ Download PDF</span></a>
-        <a class="btn ghost" href="resume.pdf" target="_blank"><span class="zh">新窗口打开</span><span class="en" hidden>Open in new tab</span></a>
+        <a class="btn" id="dlPdf" href="resume.pdf" download target="_blank"><span class="zh">⬇ 下载 PDF</span><span class="en" hidden>⬇ Download PDF</span></a>
+        <a class="btn ghost" id="openPdf" href="resume.pdf" target="_blank"><span class="zh">新窗口打开</span><span class="en" hidden>Open in new tab</span></a>
       </div>
-      <iframe class="pdf-iframe" src="resume.pdf" title="简历"></iframe>
+      <iframe class="pdf-iframe" id="pdfFrame" src="resume.pdf" title="简历"></iframe>
     </div>
   </section>
 </main>
@@ -330,9 +330,9 @@
     try { localStorage.setItem('siteLang', l); } catch (e) {}
     document.getElementById('navLinks').classList.remove('open');
   }
-  document.querySelectorAll('.lang-switch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  document.querySelectorAll('.lang-switch button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); saved=b.dataset.lang; syncR(); }); });
   var saved = 'zh'; try { saved = localStorage.getItem('siteLang') || 'zh'; } catch (e) {}
-  setLang(saved === 'en' ? 'en' : 'zh');
+  setLang(saved === 'en' ? 'en' : 'zh'); function syncR(){var rl=(saved==='en')?'resume_en.pdf':'resume.pdf';var fp=document.getElementById('pdfFrame');if(fp){fp.src=rl+'?v='+Date.now();}var dd=document.getElementById('dlPdf');if(dd){dd.href=rl;}var op=document.getElementById('openPdf');if(op){op.href=rl;}} syncR();
 
   /* 单文件多页路由 */
   var PAGES = ['home', 'education', 'research', 'honors', 'misc', 'contact', 'resume'];
