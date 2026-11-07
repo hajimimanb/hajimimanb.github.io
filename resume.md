@@ -13,6 +13,7 @@ Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 **Computer Vision / Multimodal Learning / Embodied AI / World Models**
 
 - **Current Research**：Hyperspectral Data Augmentation with Deep Learning — Research Student, Prof. Yushi Chen, HIT
+- **Current Research**：Long Video Generation — Undergraduate Research Intern, Prof. Wangmeng Zuo, HIT；切镜头长视频生成与一镜到底长视频生成（与高光谱研究同步进行）。
 - **Long-term Goal**：Developing intelligent systems that perceive, reason about, and interact with the physical world.
 
 ---
@@ -39,6 +40,14 @@ Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 
 ---
 
+### Long Video Generation
+**Undergraduate Research Intern, Prof. Wangmeng Zuo, Harbin Institute of Technology** · 进行中
+
+- 开展长视频生成相关科研工作，包括切镜头长视频生成与一镜到底长视频生成。
+- 与陈雨时教授课题组的高光谱数据增强研究同步进行。
+
+---
+
 ## 科研成果
 
 ### Publications
@@ -51,8 +60,9 @@ Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 
 ## 项目
 
+- **Long Video Generation** — 切镜头长视频生成 · 一镜到底长视频生成（左旺孟教授课题组本科科研实习）。
+
 - **Hyperspectral Data Augmentation** — PyTorch · Computer Vision · Remote Sensing · Deep Learning（陈雨时课题组科研项目）。
-- **Kamikaze — Riichi Mahjong RL System** — Python · PyTorch · Reinforcement Learning · Self-Play。独立实现的日麻 AI 系统，完整覆盖数据管线、规则环境、SL 初始化、奖励建模、PPO 自对弈、对手池与可复现评估基础设施（约 21M 参数），代码已开源可运行。
 
 ---
 
@@ -62,6 +72,11 @@ Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 - 本科专业排名前 10%
 - CET-6：552
 - 软件著作权 1 项
+- 学科奖学金 × 1
+- 人民奖学金 × 1
+- 国家级大学生创新创业训练计划（大创）项目 1 项
+- 华为软件精英挑战赛（2026）：省级二等奖
+- 昇腾AI行业创新大赛——2026电力行业算子专场：eigh 算子第三名
 
 ---
 
@@ -77,7 +92,7 @@ Email：xxx@xxx.com ｜ GitHub：github.com/hajimimanb
 
 ## 长期科研规划
 
-希望在本科阶段尽早进入稳定科研团队，逐步形成研究主线：
+在现有课题组科研与本科实习基础上，逐步形成研究主线：
 
 **Computer Vision → Multimodal Learning → Embodied AI / World Models → Intelligent Agents**
 
